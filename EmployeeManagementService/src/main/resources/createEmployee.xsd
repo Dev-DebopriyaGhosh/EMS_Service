@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.employeeManagement.service/soap/createEmployee"
+	xmlns:add="http://www.example.org/employeeAddress"
+	elementFormDefault="qualified">
+	
+	<xsd:import namespace="http://www.example.org/employeeAddress"
+                schemaLocation="./employeeAddress.xsd"/>
+	
+
+	
+	<xsd:element name="createEmployeeRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="requestIdentifier" type="xsd:string"/>
+				<xsd:element name="employeeFirstName" type="xsd:string"/>
+				<xsd:element name="employeeLastName" type="xsd:string"/>
+				<xsd:element name="employeePhone" type="xsd:string"/>
+				<xsd:element name="employeeEmail" type="xsd:string"/>
+				<xsd:element ref="add:employeeAddress"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+		
+	
+	<xsd:element name="Acknowledgement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="employeeId" type="xsd:int"/>
+				<xsd:element name="transactionMessage" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	
+</xsd:schema>

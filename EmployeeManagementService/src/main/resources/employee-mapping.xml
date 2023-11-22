@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+	<class name="com.management.model.Employee">
+		<map-to xml="EmployeeRequest"/>
+		
+		<field name="requestIdentifier" type="string">
+			<bind-xml name="requestIdentifier" node="element"/>
+		</field>
+		<field name="employeeFirstName" type="string">
+			<bind-xml name="employeeFirstName" node="element"/>
+		</field>
+		
+		<field name="employeeLastName" type="string">
+			<bind-xml name="employeeLastName" node="element"/>
+		</field>
+		
+		<field name="employeePhone" type="string">
+			<bind-xml name="employeePhone" node="element"/>
+		</field>
+		
+		<field name="employeeEmail" type="string">
+			<bind-xml name="employeeEmail" node="element"/>
+		</field>
+		
+		<field name="address" type="com.management.model.Address">
+			<bind-xml anme="address"/>
+		</field>
+	</class>
+	
+	<class name="com.management.model.Address">
+		<map-to xml="employeeAddress"/>
+		
+		<field name="addressLine1" type="string">
+			<bind-xml name="addressLine1" node="element"/>
+		</field>
+		
+		<field name="addressLine2" type="string">
+			<bind-xml name="addressLine2" node="element"/>
+		</field>
+		
+		<field name="district" type="string">
+			<bind-xml name="district" node="element"/>
+		</field>
+		
+		<field name="state" type="string">
+			<bind-xml name="state" node="element"/>
+		</field>
+		
+		<field name="country" type="string">
+			<bind-xml name="country" node="element"/>
+		</field>
+		
+		<field name="pinCode" type="int">
+			<bind-xml name="pinCode" node="element"/>
+		</field>
+		
+	</class>
+
+</mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/employeeAddress"
+	xmlns:tns="http://www.example.org/employeeAddress"
+	elementFormDefault="qualified">
+	
+	<xsd:element name="employeeAddress">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="addressLine1" type="xsd:string"/>
+				<xsd:element name="addressLine2" type="xsd:string"/>
+				<xsd:element name="district" type="xsd:string"/>
+				<xsd:element name="state" type="xsd:string"/>
+				<xsd:element name="country" type="xsd:string"/>
+				<xsd:element name="pinCode" type="xsd:int"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
